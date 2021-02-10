@@ -12,6 +12,8 @@ def shorten():
     url = link.get()
     if not validators.url(url):
         result_text.insert(0.0, "Wrong URL, try again\n")
+    elif "tinyurl" in url:
+        result_text.insert(0.0, "URL is same as tinyurl\n")
     else:
         _link = pyshorteners.Shortener()
         result = _link.tinyurl.short(url)
