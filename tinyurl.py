@@ -42,4 +42,3 @@ result_text.tag_config("tag1", foreground="blue")
 result_text.tag_bind("tag1", "<Button-1>", lambda e: callback())
 
 win.mainloop()
-
